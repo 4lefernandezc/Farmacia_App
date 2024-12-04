@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="" />
+    <script src="/leaflet/leaflet.js"></script>
+    <script type="module" src="addfarmacia.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        .formfarmacia {
+            display: flex;
+            justify-content: space-between;
+            padding: 0px 50px;
+            height: 100vh;
+        }
+        .textform {
+            width: 50%;
+        }
+        #MapForm {
+            width: 50%;
+            height: 90vh;
+        }
+        #formfarmacia {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin-right: 20px;
+        }
+        #formfarmacia label {
+            margin-top: 10px;
+        }
+        #formfarmacia input {
+            margin-bottom: 10px;
+            padding: 5px;
+        }
+        #formfarmacia button {
+            padding: 10px;
+            background-color: black;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+    <!-- form with firebase -->
+
+    <div class="formfarmacia">
+        <div class="textform">
+            <h1>Formulario de Farmacia</h1>
+            <form id="formfarmacia">
+                <label for="nombre">Nombre</label>
+                <input type="text" id="nombre" name="nombre" required>
+                <label for="direccion">Dirección</label>
+                <input type="text" id="direccion" name="direccion" required>
+                <label for="telefono">Teléfono</label>
+                <input type="number" id="telefono" name="telefono" required>
+                <label for="horario">Horario</label>
+                <input type="text" id="horario" name="horario" required>
+                <input type="hidden" id="lat" name="lat" required>
+                <input type="hidden" id="lng" name="lng" required>
+                <button type="submit" id="save">Enviar</button>
+            </form>
+        </div>
+        <div id="MapForm"></div>
+    </div>
+
+    <script>
+        
+        
+    </script>
+</body>
+</html>
